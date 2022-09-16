@@ -83,7 +83,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/a807460d64ac73c5dc83a.jpg)
+✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/06ce9343d9685e6ce2f56.jpg)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -114,7 +114,7 @@ Click on the button bellow to get description about specifics command."""
 CILIK_IMG = "https://telegra.ph/file/06ce9343d9685e6ce2f56.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @greyyvbss \
+ You can support the project by contacting @BijiKacang \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
