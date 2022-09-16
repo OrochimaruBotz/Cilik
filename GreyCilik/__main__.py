@@ -99,7 +99,7 @@ buttons = [
     [
         InlineKeyboardButton(text="Get Help ❓", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Support 💌", url=f"t.me/{SUPPORT_CHAT}"
+            text="Support 💌", url=f"t.me/HumanzBotSupport"
         ),
     ],
     [
@@ -111,7 +111,7 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-CILIK_IMG = "https://telegra.ph/file/a807460d64ac73c5dc83a.jpg"
+CILIK_IMG = "https://telegra.ph/file/06ce9343d9685e6ce2f56.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @greyyvbss \
@@ -383,7 +383,7 @@ def cilik_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="cilik_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com"),
+                    InlineKeyboardButton(text="Source Code", url="https://github.com/OrochimaruBotz/Cilik"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="cilik_back"),
@@ -436,13 +436,13 @@ def cilik_about_callback(update, context):
         )
     elif query.data == "cilik_support":
         query.message.edit_text(
-            text="*๏ cilik support chats*"
+            text="*๏ Gojo support chats*"
             f"\nJoin My Support Group/Channel for see or report a problem on {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/CilikSupport"),
+                    InlineKeyboardButton(text="Support", url="t.me/HumanzBotSupport"),
                     InlineKeyboardButton(text="Updates", url="https://t.me/CilikProject"),
                  ],
                  [
@@ -462,7 +462,7 @@ def cilik_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="sena-ex", url="https://github.com/kennedy-ex"),
+                    InlineKeyboardButton(text="OrochimaruBotz", url="https://github.com/OrochimaruBotz"),
                     InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
                  ],
                  [
@@ -750,7 +750,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1784606556:
+        if OWNER_ID != 5274167163:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
@@ -798,7 +798,7 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.sendMessage(
-                f"@{SUPPORT_CHAT}", 
+                f"@HumanzBotSupport", 
                 "👋 Hi, i'm alive.",
                 parse_mode=ParseMode.MARKDOWN
             )
