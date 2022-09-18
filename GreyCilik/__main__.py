@@ -82,13 +82,13 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
+*Hello {} 👋*
 ✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/06ce9343d9685e6ce2f56.jpg)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
 ────────────────────────
-✪ Hit /help to see my available commands.
+๏ Hit /help to see my available commands.
 """
 
 buttons = [
@@ -97,13 +97,13 @@ buttons = [
             text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
     ],
     [
-        InlineKeyboardButton(text="Get Help ❓", callback_data="help_back"),
+        InlineKeyboardButton(text="Help Command", callback_data="help_back"),
         InlineKeyboardButton(
             text="Support 💌", url=f"t.me/HumanzBotSupport"
         ),
     ],
     [
-        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
+        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🔥", callback_data="cilik_"),
     ],
 ]
 
@@ -113,10 +113,7 @@ Click on the button bellow to get description about specifics command."""
 
 CILIK_IMG = "https://telegra.ph/file/06ce9343d9685e6ce2f56.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @BijiKacang \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """ Gratis Buat Semua🔥"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -230,7 +227,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
+            f"👋 Hi, I'm {dispatcher.bot.first_name}. Senang bertemu denganmu.",
             parse_mode=ParseMode.HTML
        )
 
@@ -383,7 +380,7 @@ def cilik_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="cilik_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/OrochimaruBotz/Cilik"),
+                    InlineKeyboardButton(text="Source Code",  url="https://github.com"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="cilik_back"),
